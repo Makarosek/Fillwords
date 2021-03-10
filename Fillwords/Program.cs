@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
 
 namespace Fillwords
 {
@@ -8,26 +6,6 @@ namespace Fillwords
     {
         static void Main(string[] args)
         {
-            /*ConsoleKeyInfo key;
-            int left = 0, top = 0;
-
-            do
-            {
-                Console.Clear();
-                Console.SetCursorPosition(left, top);
-
-                Console.WriteLine(">");
-                key = Console.ReadKey();
-
-                if (key.Key == ConsoleKey.LeftArrow) left--;
-                if (key.Key == ConsoleKey.RightArrow) left++;
-                if (key.Key == ConsoleKey.DownArrow) top--;
-                if (key.Key == ConsoleKey.UpArrow) top++;
-
-                if (left < 0) left = 0;
-                if (top < 0) top = 0;
-            } 
-            while (key.Key != ConsoleKey.Escape);*/
             Menu mainMenu = new Menu(new []{"Новая игра", "Продолжить", "Рейтинг", "Выход"});
             mainMenu.StartMenu();
 

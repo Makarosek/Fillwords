@@ -9,7 +9,7 @@ namespace Fillwords
 
         public Menu(string[] buttonsNames)
         {
-            this.buttons = new Button[buttonsNames.Length];
+            buttons = new Button[buttonsNames.Length];
             for (int i = 0; i < buttonsNames.Length; i++)
             {
                 buttons[i] = new Button(buttonsNames[i]);
@@ -23,7 +23,7 @@ namespace Fillwords
 
             do
             {
-                PrintMenu();
+                Printer.PrintMenu(buttons, number);
                 
                 key = Console.ReadKey();
 
@@ -44,16 +44,6 @@ namespace Fillwords
 
 
             } while (key.Key != ConsoleKey.Enter);
-        }
-
-        private void PrintMenu()
-        {
-            Console.Clear();
-            for (var index = 0; index < buttons.Length; index++)
-            {
-                Button button = buttons[index];
-                button.Print(number == index);
-            }
         }
 
         public int GetSelectedID()
